@@ -2,18 +2,18 @@
 <html>
 <head>
 	<title>Gunda | Let's talk music</title>
-	<link rel="shortcut icon" href="images/gunda-logo.png"/>
+	<link rel="shortcut icon" href="/static/core/images/gunda-logo.png"/>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
 	<meta name="format-detection" content="telephone=no">
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/material.min.css">
-	<link rel="stylesheet" type="text/css" href="css/material-icons.css">
-	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/material.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/material-icons.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/materialdesignicons.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/core/css/styles.css">
 	<style type="text/css">
 		.playlist-list .right{
 			position: absolute;
@@ -146,18 +146,20 @@
 			</div>
 
 
+	</div>
+
 
 		<!--this is the music player at the bottom before the footer-->
 		<div class="player">
 			<div class="rows">
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="free-10"></div>
-					<div class="col-md-3 col-sm-3 col-xs-3"><img src="images/avatar1.jpg" class="avatar img-circle" style="width: 60px;"></div>
+					<div class="col-md-3 col-sm-3 col-xs-3"><img src="/static/core/images/avatar1.jpg" class="avatar img-circle" style="width: 60px;"></div>
 					<div class="col-md-9 col-sm-9 col-xs-9 audio-player">
-						<a href="#" id="rewind"><i class="mdi mdi-rewind"></i></a>
-						<a href="#" id="play" data-state="play" data-role="http://localhost/gunda/music/barcelona.mp3"><i class="mdi mdi-play-circle-outline"></i></a>
-						<a href="#" id="pause" data-state="pause" style="display: none;"><i class="mdi mdi-pause-circle-outline"></i></a>
-						<a href="#" id="forward"><i class="mdi mdi-fast-forward"></i></a>
+						<a id="rewind"><i class="mdi mdi-rewind"></i></a>
+						<a id="play" data-state="play" data-role="http://localhost/gunda/music/barcelona.mp3"><i class="mdi mdi-play-circle-outline"></i></a>
+						<a id="pause" data-state="pause" style="display: none;"><i class="mdi mdi-pause-circle-outline"></i></a>
+						<a id="forward"><i class="mdi mdi-fast-forward"></i></a>
 					</div>
 				</div>
 				<div class="col-md-4  col-sm-4 col-xs-12 audio-name" style="background:#B57F43; color:#222; padding:30px; min-height: 80px; text-align:center; font-size:23px;">
@@ -218,13 +220,11 @@
       </div>
     </footer>
 
-	</div>
-
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/material.min.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="/static/core/js/angular.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/material.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/wow.js"></script>
+	<script type="text/javascript" src="/static/core/js/custom.js"></script>
 </body>
 </html>

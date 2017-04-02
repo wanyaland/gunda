@@ -14,6 +14,43 @@
 	<link rel="stylesheet" type="text/css" href="css/material-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<style type="text/css">
+		.new-releases .mdi-play{
+			font-size:20px;
+			height: 25px;
+			width: 25px;
+			line-height: 25px;
+			text-align: center;
+		}
+		.right-menu a{
+			padding: 6px 20px 6px;
+			text-transform: uppercase;
+			background:#fff;
+			color: #333;
+			float:right;
+		}
+		.logged-in{
+			width: 80%;
+			margin: 0 auto;
+		}
+		.name{
+			font-size: 20px;
+			color: #fff;
+			padding-top: 30px;
+			text-shadow: 1px 1px 1px #333;
+		}
+@media only screen and (max-width: 720px) {
+		.name{
+			padding-top: 10px;
+		}
+		.right-menu a{
+			padding:6px;
+		}
+		.right-menu{
+			padding:20px 0;
+		}
+}
+	</style>
 </head>
 <body>
 
@@ -72,33 +109,77 @@
 		   </div>
 		</nav>
 
-		<div class="rows  edit-80 search-results" style="width:75%; margin:auto;">
-		<h4>Search Results</h4>
-			<div class="media">
-			   <a class="pull-left" href="#">
-			      <img class="media-object" src="images/artists/kenzo.jpg" alt="Media Object" style="width:40px; height: 40px;">
-			   </a>
-			   <div class="media-body">
-			      <h6 class="media-heading">Eddie Kenzo</h6>
-			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. <a href="">More information</a>
-			   </div>
+		<div class="jumbotron" style="padding: 20px; background:url(images/playlist.jpg); background-size: cover;">
+			<div class="rows logged-in">
+				<div class="col-md-1 col-sm-1 col-xs-3" style="padding: 0;">
+					<img src="images/avatar3.jpg" class="img-circle img-responsive">
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-9 name">Kwizera Innocent</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 right-menu">
+					<a href="">Upload</a>
+					<a href="">playlist</a>
+					<a href="">logout</a>
+				</div>
 			</div>
-			<div class="media">
-			   <a class="pull-left" href="#">
-			      <img class="media-object" src="images/artists/rema.jpg" alt="Media Object" style="width:40px; height: 40px;">
-			   </a>
-			   <div class="media-body">
-			      <h6 class="media-heading">Rema</h6>
-			      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.<a href="">More information</a>
-			   </div>
-			</div>
-
+			<div class="free-0"></div>
 		</div>
 
+        <div class="container main-container">
+        <div class="free-10"></div>
+        <div class="rows">
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <div class="rows new-releases">
+	                <div class="col-md-4">
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Accelerator RMX <font>Brian Weiyz ft Maro</font></div>
+	                    <hr/>
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Omuntu <font>Lydia Jazime ft Sheebah</font></div>
+	                    <hr/>
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Sweet Love <font>Wizkid</font></div>
+	                </div>
+	                <div class="col-md-4">
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Accelerator RMX <font>Brian Weiyz ft Maro</font></div>
+	                    <hr/>
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Omuntu <font>Lydia Jazime ft Sheebah</font></div>
+	                    <hr/>
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Sweet Love <font>Wizkid</font></div>
+	                </div>
+	                <div class="col-md-4">
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Accelerator RMX <font>Brian Weiyz ft Maro</font></div>
+	                    <hr/>
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Omuntu <font>Lydia Jazime ft Sheebah</font></div>
+	                    <hr/>
+	                    <div class="col-md-2 col-sm-2 col-xs-2"><i class="mdi mdi-play"></i></div>
+	                    <div class="col-md-8 col-sm-8 col-xs-8">Sweet Love <font>Wizkid</font></div>
+	                </div>
+
+
+                </div>
+                  <div class="free-20"></div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12" style="text-align: center;">
+              
+                <div class="col-md-3 col-sm-3 col-xs-6">DOWNLOADS<h5>30k</h5></div>
+                <div class="col-md-3 col-sm-3 col-xs-6">TRACKS<h5>500</h5></div>
+                <div class="col-md-3 col-sm-3 col-xs-6">FOLLOWERS<h5>500</h5></div>
+                <div class="col-md-3 col-sm-3 col-xs-6">FOLLOWING<h5>60k</h5></div>
+                <div class="free-20"></div>
+                <a href="" class="btn btn-primary" style="width: 80%;">Share ob facebook</a>
+                <div class="free-10"></div>
+                <a href="" class="btn btn-info" style="width: 80%;">Share ob twitter</a>
+            </div>
+        </div>
+        </div>
+
+
+		<div class="free-50"></div>
 
 		<!--this is the footer-->
 		<footer class="footer">

@@ -15,9 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body style="background-image: url('images/login.jpg'); background-size:cover;">
+<body style="background: #fff;">
 
-	<div class="entire-page">
 		<div class="top-header">
 			<div class="rows">
 				<div class="col-md-3">
@@ -74,53 +73,34 @@
 
 
 
-		<div class="login-form rows">
-			<h5 style="font-family: Roboto-Regular;">Creat an account</h5>
-			<form>
-					<div class="col-md-6 col-sm-6 col-xs-12 names" style="padding-left:0; padding-right: 3px;">
-						<input type="text" name="firstname" placeholder="First Name" class="form-control" style="background:#1E1F23; color:brown;" />
+	<div class="container" style="width: 100%; padding: 0; margin: 0;">
+		<div class="rows" style="width: 100%; padding:0;">
+			<div class="col-md-6" style="background: -webkit-linear-gradient(rgba(181,126,67,.9), rgba(181,126,67,.9)), url('images/sign-up.jpg'); background-size: cover; background-blend-mode: multiply; padding-left: 50px;">
+				<div class="free-100 mobile-hide"></div>
+				<div class="free-100"></div>
+				<div class="free-100"></div>
+				<h3 style="color:#fff;">GET FREE MUSIC<br/>ON GUNDA</h3>
+				<div class="free-50"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="free-20"></div>
+				<form class="sign-up-form">
+				<h4 style="font-family: Roboto-Regular; text-transform: uppercase;">Creat an account</h4>
+					<label>Email Address</label>
+					<input type="email" name="email" placeholder="Email" class="form-control"/>
+					<label>Username</label>
+					<input type="text" name="username" placeholder="Username" class="form-control"/>
+					<label>Password</label>
+					<input type="password" name="password" placeholder="Password" class="form-control"/>
+					<div class="free-10"></div>
+					<input type="submit" name="" value="Create Account" class="btn btn-primary" style="background:#B57E43; color:#fff; border-radius: 3px; border:none; text-align: center; width: 60%; margin:auto !important; display: block; border-bottom:2px solid #B27D43 !important;">
+					<div style="text-align: center; margin-top: 5px; clear: both;">
+						<a href="login.html" style="color:#333;" class="already">Already have an account? Sign In</a>
 					</div>
-
-					<div class="col-md-6 col-sm-6 col-xs-12 names" style="padding:0;">
-						<input type="text" name="lastname" placeholder="Last name" class="form-control" style="background:#1E1F23; color:brown; " />
-					</div>
-
-					<div class="input-group">
-						<span class="input-group-btn">
-							<button class="btn btn-default" style=""><i class="mdi mdi-account"></i></button>
-						</span>
-						<input type="text" name="username" placeholder="Username" class="form-control" style="background:#1E1F23; color:brown;" />
-					</div>
-
-					<div class="input-group">
-						<span class="input-group-btn">
-							<button class="btn btn-default" style=""><i class="mdi mdi-email"></i></button>
-						</span>
-						<input type="text" name="email" placeholder="Email" class="form-control" style="background:#1E1F23; color:brown;" />
-					</div>
-
-					<div class="input-group">
-						<span class="input-group-btn">
-							<button class="btn btn-default" style=""><i class="mdi mdi-lock"></i></button>
-						</span>
-						<input type="text" name="password" placeholder="Password" class="form-control" style="background:#1E1F23; color:brown;" />
-					</div>
-					<div class="input-group">
-						<span class="input-group-btn">
-							<button class="btn btn-default" style=""><i class="mdi mdi-lock"></i></button>
-						</span>
-						<input type="text" name="password_two" placeholder="Re-Enter Password" class="form-control" style="background:#1E1F23; color:brown;" />
-					</div>
-
-					<input type="submit" name="" value="Sign up" class="btn btn-primary" style="background:#353638; color:#fff; border-radius: 3px; border:none; text-align: center; width: 100%; border-bottom:2px solid #B27D43 !important;">
-					<div class="rows" style="margin-top:20px;">
-						<div style="text-align: center; margin-top: 20px; clear: both; padding-top: 20px;">
-							<a href="login.html" style="color:#333;" class="already">Already have an account? Sign In</a>
-						</div>
-					</div>
-			</form>
+				</form>
+			</div>
 		</div>
-
+	</div>
 
 		<!--this is the footer-->
 		<footer class="footer">
@@ -154,8 +134,7 @@
         </div>
       </div>
     </footer>
-		
-	</div>
+
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

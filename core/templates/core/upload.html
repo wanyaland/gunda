@@ -72,30 +72,46 @@
 		   </div>
 		</nav>
 
-		<div class="rows  edit-80" style="width:80%; margin:auto;">
+		<div class="rows main-container">
+		<form class="upload-form" enctype="multipart/form-data" method="" action="">
+			<div class="free-20"></div>
+					<h3 class="center">Upload to Gunda Music</h3><hr/>
+					<input type="file" name="" class="form-control" style="border-radius: 1px; margin:auto; width: 30%; background: #B57E43; color: #fff; border-radius: 4px; box-shadow: none;">
+					<div class="free-20"></div>
 			<div class="col-md-3 col-sm-3 col-xs-12">
-				<ul class="nav logged-in-menu">
-					<li><a href="">Latest Tracks</a></li>
-					<li><a href="">Your Tracks</a></li>
-					<li><a href="upload.html">Upload Tracks</a></li>
-					<li><a href="edit.html">Edit Track</a></li>
-				</ul>
+				<label>Title</label>
+				<input type="text" name="" placeholder="Title" class="form-control"/>
 			</div>
-			<div class="col-md-9 col-sm-9 col-xs-12">
-			<div class="thumbnail upload mdl-shadow--2dp" style="width:65%; border:none; border-radius: 0; margin-top: 10px; background:#fff; padding:20px; ">
-				<form enctype="multipart/form-data" method="" action="">
-					<h5>Upload a new Track</h5><hr/>
-					<label>Select File to upload</label>
-					<input type="file" name="" class="form-control" style="border-radius: 1px; background: #fafafa; box-shadow: none;">
-					<div class="free-20"></div><hr/>
-					<button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="background: #A77A42; margin:auto; display: block;">
-					  <i class="mdi mdi-upload"></i>
-					</button>
-				</form>
-			</div>				
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<label>Genre</label>
+				<select name="genre" class="form-control">
+					<option value="rnb">RnB</option>
+					<option value="hip hop">Hop Hop</option>
+					<option value="rock">Rock</option>
+					<option value="pop">pop</option>
+				</select>
 			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<label>Art Work</label>
+				<input type="text" name="" placeholder="Thumbnail" class="form-control"/>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<label>Album Title</label>
+				<input type="text" name="" placeholder="Album Title" class="form-control"/>
+			</div>
+			<div class="free-20"></div>
+			<div class="col-md-9">*Agree with Terms and Conditions  <input type="checkbox" name="" value="terms" class="check" /> </div>
+			<div class="col-ms-3">
+				Share on &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook"></i> <input type="checkbox" name="" value="facebook" class="check" /> 
+				&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i> <input type="checkbox" name="" value="twitter" class="check" />
+			</div>
+			<p style="padding:15px;">What types of Files can I upload? You can upload AIFF, WAVE (WAV), FLAC, ALAC, OGG, MP2, MP3, AAC, AMR, and WMA files. The maximum File size is 5GB.</p>
+			<button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="background: #A77A42; margin:auto; display: block;">
+			  <i class="mdi mdi-upload"></i>
+			</button>
+		</form>
 		</div>
-
+		<div class="free-50"></div>
 
 		<!--this is the footer-->
 		<footer class="footer">
