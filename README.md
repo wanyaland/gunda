@@ -1,6 +1,9 @@
 # gunda
 Your one stop center for music ...
-view artists their music.
+view artists music.
 Upload music
 Create playlist
-View Top hits
+View Top hits per region
+Share music
+authentication - twitter and bootstrap
+
