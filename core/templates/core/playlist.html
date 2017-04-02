@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gunda | Let's talk music</title>
+	<link rel="shortcut icon" href="images/gunda-logo.png"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/material.min.css">
+	<link rel="stylesheet" type="text/css" href="css/material-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<style type="text/css">
+		/*THESE ARE THE STYLES FOR THE PLAYLIST SLIDERS*/
+/* Removes the default 20px margin and creates some padding space for the indicators and controls */
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+/* Reposition the controls slightly */
+.carousel-control {
+    left: -12px;
+    background:none !important;
+}
+.carousel-control.right {
+    right: -12px;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+    background: #c0c0c0;
+}
+.carousel-indicators .active {
+background: #333333;
+}
+/*END OF THE STYLES FOR THE PLAYLIST SLIDERS*/
+
+	</style>
+</head>
+<body>
+
+	<div class="entire-page">
+		<div class="top-header">
+			<div class="rows">
+				<div class="col-md-3">
+					<a href="index.html"><img src="images/gunda-logo.png" class="img-responsive" style="width: 80%;" /></a>
+				</div>
+				<div class="col-md-6 slogan">
+					<h1>WE'RE MUSIC</h1>
+				</div>
+				<div class="col-md-3 search-page">
+					<form>
+						<div class="input-group">
+							<input type="text" name="search" placeholder="Search" class="form-control"/>
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit" style="margin-top:30px; font-size:25px; height: 34px; padding-top: 0px; border-radius: 0; border-left:none !important; background: none; border:1px solid #aaa; color:#fff;"><i class="mdi mdi-magnify"></i></button>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--THIS IS THE START OF THE MENU BAR-->
+		<nav class="navbar navbar-default main-header" role="navigation">
+			<div class="mid-main-header">
+			      <ul class="nav navbar-nav">
+			         <li><a href="new.html" class="header-links">WHAT'S NEW</a></li>
+			         <li><a href="artists.html" class="header-links">artists</a></li>
+			         <li><a href="playlist.html" class="header-links">PLAYLIST</a></li>
+			         <li><a href="login.html" class="header-links" style="border-right:0;">LOGIN</a></li>
+			      </ul>
+			</div>
+		</nav>
+		<!--THIS IS THE END OF THE MENU BAR-->
+
+ <nav class="navbar navbar-default mobile-header" role="navigation">
+           <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                 data-target="#example-navbar-collapse">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html" style="padding-top: 0 !important;"><img src="images/gunda-logo.png" class="img-responsive" style="width: 100px;" margin-top:0;/></a>
+           </div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                  <ul class="nav">
+                     <li><a href="new.html" class="collapsed-header-links">WHAT'S NEW</a></li>
+                     <li><a href="artists.html" class="collapsed-header-links">artists</a></li>
+                     <li><a href="playlist.html" class="collapsed-header-links">PLAYLIST</a></li>
+                     <li><a href="login.html" class="collapsed-header-links" style="border-right:0;">LOGIN</a></li>
+                  </ul>
+           </div>
+        </nav>
+
+
+		<div class="container main-container">
+			<div class="jumbotron" style="background:url('images/playlist.jpg'); background-size: cover; height: 100px;"></div>
+
+
+<ul id="myTab" class="nav nav-tabs" style="width: 40%; margin:auto;">
+   <li class="active"><a href="#home" data-toggle="tab">Music</a></li>
+   <li><a href="#genre" data-toggle="tab">Genre and Moods</a></li>
+   <li><a href="#new" data-toggle="tab">new release</a></li>
+   <li><a href="#top" data-toggle="tab">Top lists</a></li>
+
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="home">
+
+    <div class="container">
+    	<div class="row">
+                    <div id="myCarousel" class="carousel slide playlist-list"  style="width: 70%; margin: auto; background: none;">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner" style="background:none;">
+                        
+                    <div class="item active">
+                    	<div class="row-fluid">
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/a.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/b.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/c.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/e.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/f.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/g.jpg" class="img-responsive"/></a></div>
+                    	</div><!--/row-fluid-->
+                    </div><!--/item-->
+                     
+                    <div class="item">
+                    	<div class="row-fluid">
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/a.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/b.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/c.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/e.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/f.jpg" class="img-responsive"/></a></div>
+                    	  <div class="col-md-2 col-sm-3 col-xs-4"><a href="#x"><img src="images/thumbs/g.jpg" class="img-responsive"/></a></div>
+                    	</div><!--/row-fluid-->
+                    </div><!--/item-->
+                     
+                    </div><!--/carousel-inner-->
+                     
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="mdi mdi-chevron-double-left"></i></a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="mdi mdi-chevron-double-right"></i></a>
+                    </div><!--/myCarousel-->  
+    	</div>
+    </div>
+
+
+   </div>
+   <div class="tab-pane fade" id="genre">
+      <h3>Genre and moods</h3>
+   </div>
+   <div class="tab-pane fade" id="new">
+      <h3>New Release</h3>
+   </div>
+   <div class="tab-pane fade" id="top">
+      <h3>Top Lists</h3>
+   </div>
+   <div class="free-30"></div>
+</div>
+
+
+
+
+		</div>
+
+        <!--this is the music player at the bottom before the footer-->
+        <div class="player">
+            <div class="rows">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="free-10"></div>
+                    <div class="col-md-3 col-sm-3 col-xs-3"><img src="images/avatar1.jpg" class="avatar img-circle" style="width: 60px;"></div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 audio-player">
+                        <a href="#" id="rewind"><i class="mdi mdi-rewind"></i></a>
+                        <a href="#" id="play" data-state="play"><i class="mdi mdi-play-circle-outline"></i></a>
+                        <a href="#" id="pause" data-state="pause" style="display: none;"><i class="mdi mdi-pause-circle-outline"></i></a>
+                        <a href="#" id="forward"><i class="mdi mdi-fast-forward"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 audio-name" style="background:#B57F43; color:#222; padding:30px; min-height: 80px; text-align:center; font-size:23px;">
+                    
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="col-md-9 col-sm-9 col-xs-9 audio-progress">
+                        <div class="free-30"></div>
+                            <div class="progress">
+                               <div class="progress-bar audio-range" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="min-width:0;">
+                                  <span class="sr-only"></span>
+                               </div>
+                            </div>
+                            <span class="currentTime"></span>
+                            <span class="duration"></span>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <center>
+                            <a href="http://localhost/gunda/music/noPromises.mp3" id="download" download style="display: inline-block; border:2px solid #aaa; border-radius: 100%; height:40px; width: 40px; text-align: center; font-size:25px; padding-top:5px; margin-top:20px; color:#787679;"><i class="mdi mdi-download"></i></a>
+                        </center>
+                    </div>
+                </div>
+                <div class="free-0"></div>
+            </div>
+        </div>
+
+
+
+		<!--this is the footer-->
+		<footer class="footer">
+			<div class="rows">
+				<div class="col-md-5">
+					&copy; Copyright 2017 Gunda All rights reserved<br/>
+					<a href="">Terms and conditions</a>
+				</div>
+
+				<div class="col-md-7">
+					Connect with us: &nbsp;&nbsp;&nbsp;&nbsp; 
+					<font class="icons"><i class="mdi mdi-facebook"></i></font> 
+					<font class="icons"><i class="mdi mdi-twitter"></i></font>
+					<font class="icons"><i class="mdi mdi-instagram"></i></font>
+				</div>
+			</div>
+		</footer>
+    <footer class="mobile-footer">
+      <div class="rows">
+        <div class="col-md-5">
+          &copy; Copyright 2017 Gunda All rights reserved<br/>
+          <a href="">Terms and conditions</a>
+          <div class="free-10"></div>
+        </div>
+
+        <div class="col-md-7">
+          Connect with us<div class="free-10"></div> 
+          <font class="icons"><i class="mdi mdi-facebook"></i></font> 
+          <font class="icons"><i class="mdi mdi-twitter"></i></font>
+          <font class="icons"><i class="mdi mdi-instagram"></i></font>
+        </div>
+      </div>
+    </footer>
+
+    
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/material.min.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
