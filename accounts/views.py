@@ -29,13 +29,13 @@ def logout_user(request):
 
 
 def sign_up(request):
-    if request.POST:
+    if request.method == 'POST':
         registration_form = RegistrationForm(request.POST)
         profile_form = ProfileForm(request.POST)
         if registration_form.is_valid() and profile_form.is_valid():
-            user=registration_form.save(commit=False)
+            user = registration_form.save(commit=False)
             user.save
-            profile = profile_form.save()
+            profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
         return HttpResponseRedirect(reverse('core:home'))

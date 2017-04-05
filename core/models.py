@@ -50,7 +50,11 @@ class Genre(models.Model):
 
     def __unicode__(self):
         return "%s" % self.name
-
+class Playlist(models.Model):
+    name = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __unicode__(self):
+        return self.name
 
 class Track(models.Model):
     user = models.ForeignKey(Profile,
@@ -69,6 +73,7 @@ class Track(models.Model):
     description = models.CharField(_("Description"),max_length=255,null=True,blank=True)
     slug = models.SlugField(verbose_name=_("Slug(last part of url)"))
     _original_slug = None
+    playlist = models.ForeignKey(Playlist,blank=True,null=True)
 
     def __unicode__(self):
         return self.title
