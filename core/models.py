@@ -27,34 +27,39 @@ def slugify_uniquely(value, obj, slugfield="slug"):
         # we hit a conflicting slug, so bump the suffix & try again
         suffix += 1
 
+class Album(models.Model):
+    title = models.CharField(max_length=255)
 
-class Artist(models.Model):
+    def __unicode__(self):
+        return self.title
+
+
+class Profile(models.Model):
     user = models.OneToOneField(User)
+    is_artist = models.BooleanField(default=False)
+    avatar = ImageWithThumbsField(
+        upload_to="/images%Y/%m/%d"
+    )
 
-    @receiver(post_save,sender=User)
-    def create_user_artist(sender,instance,created,**kwargs):
-        if created:
-            Artist.objects.create(user=instance)
-
-    @receiver(post_save,sender=User)
-    def save_user_artist(sender,instance,**kwargs):
-        instance.artist.save()
+    def  __unicode__(self):
+        return "%s " %(self.user.username)
 
 
 class Genre(models.Model):
     name = models.CharField(max_length=255)
 
     def __unicode__(self):
-        return self.name
+        return "%s" % self.name
 
 
 class Track(models.Model):
-    user = models.ForeignKey(Artist,
+    user = models.ForeignKey(Profile,
                              related_name="tracks",blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     audio_file = models.FileField(
         _("Audio file"),upload_to= "audio%Y/%m/%d",blank=True)
+    album = models.ForeignKey(Album,null=True,blank=True)
     image = ImageWithThumbsField(
         _("Image"),upload_to="images%Y/%m/%d",null=True,blank=True,
         sizes=((80,80),(302,154)))
@@ -66,7 +71,7 @@ class Track(models.Model):
     _original_slug = None
 
     def __unicode__(self):
-        return self.name
+        return self.title
 
     def save(self,**kwargs):
         if not self.slug:

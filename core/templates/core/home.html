@@ -81,9 +81,9 @@
 			<div class="mid-main-header">
 			      <ul class="nav navbar-nav">
 			         <li><a href="new.html" class="header-links">WHAT'S NEW</a></li>
-			         <li><a href="artists.html" class="header-links">artists</a></li>
-			         <li><a href="playlist.html" class="header-links">PLAYLIST</a></li>
-			         <li><a href="login.html" class="header-links" style="border-right:0;">LOGIN</a></li>
+			         <li><a href="{% url 'core:artists' %}" class="header-links">artists</a></li>
+			         <li><a href="{% url 'core:playlist' %}" class="header-links">PLAYLIST</a></li>
+			         <li><a href="{% url 'accounts:login' %}" class="header-links" style="border-right:0;">LOGIN</a></li>
 			      </ul>
 			</div>
 		</nav>
