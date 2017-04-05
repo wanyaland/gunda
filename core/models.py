@@ -10,7 +10,7 @@ from django.db.models.signals import post_save
 
 # Create your models here.
 
-#from .thumbs import ImageWithThumbsField
+from .thumbs import ImageWithThumbsField
 
 def slugify_uniquely(value, obj, slugfield="slug"):
     suffix = 1
@@ -47,6 +47,7 @@ class Genre(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class Track(models.Model):
     user = models.ForeignKey(Artist,
                              related_name="tracks",blank=True,null=True)
@@ -54,9 +55,9 @@ class Track(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
     audio_file = models.FileField(
         _("Audio file"),upload_to= "audio%Y/%m/%d",blank=True)
-    #image = ImageWithThumbsField(
-        #_("Image"),upload_to="images%Y/%m/%d",null=True,blank=True,
-        #sizes=((80,80),(200,200)))
+    image = ImageWithThumbsField(
+        _("Image"),upload_to="images%Y/%m/%d",null=True,blank=True,
+        sizes=((80,80),(302,154)))
     title = models.CharField(_("Title"),max_length=200,null=True)
     genre = models.ForeignKey(Genre,null=True,blank=True)
     date = models.CharField(_("Date"),max_length=200,null=True,blank=True)
