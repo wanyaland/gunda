@@ -21,7 +21,7 @@
 		<div class="top-header">
 			<div class="rows">
 				<div class="col-md-3">
-					<a href="{% url 'core:home' %}"><img src="/static/core/images/gunda-logo.png" class="img-responsive" style="width: 80%;" /></a>
+					<a href="index.html"><img src="/static/core/images/gunda-logo.png" class="img-responsive" style="width: 80%;" /></a>
 				</div>
 				<div class="col-md-6 slogan">
 					<h1>WE'RE MUSIC</h1>
@@ -44,7 +44,7 @@
 			<div class="mid-main-header">
 			      <ul class="nav navbar-nav">
 			         <li><a href="new.html" class="header-links">WHAT'S NEW</a></li>
-			         <li><a href="artists.html" class="header-links">Artists</a></li>
+			         <li><a href="artists.html" class="header-links">artists</a></li>
 			         <li><a href="playlist.html" class="header-links">PLAYLIST</a></li>
 			         <li><a href="login.html" class="header-links" style="border-right:0;">LOGIN</a></li>
 			      </ul>
@@ -76,8 +76,7 @@
 
 		<div class="login-form">
 			<div class="free-50"></div>
-			<form method="post" action="{% url 'accounts:login' %}">
-				{% csrf_token %}
+			<form method="post" action="{% url 'accounts:login' %}"> {% csrf_token %}
 					<div class="input-group">
 						<span class="input-group-btn">
 							<button class="btn btn-default" style=""><i class="mdi mdi-account"></i></button>
@@ -90,6 +89,9 @@
 							<button class="btn btn-default" style=""><i class="mdi mdi-lock"></i></button>
 						</span>
 						<input type="password" name="password" placeholder="Password" class="form-control" style="background:#1E1F23; color:brown;" />
+						{% if next %}
+						<input type="hidden" name="next" value="{{next}}"/>
+						{% endif %}
 					</div>
 					<input type="submit" name="" value="Sign in" class="btn btn-primary" style="background:#353638; color:#fff; border-radius: 3px; border:none; text-align: center; width: 100%; border-bottom:2px solid #B27D43 !important;">
 					<div class="rows" style="margin-top:20px; clear: both;">
@@ -149,11 +151,11 @@
     </footer>
 		
 	</div>
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/material.min.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="/static/core/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/angular.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/material.min.js"></script>
+	<script type="text/javascript" src="/static/core/js/wow.js"></script>
+	<script type="text/javascript" src="/static/core/js/custom.js"></script>
 </body>
 </html>
