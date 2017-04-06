@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}
+{% load extra %}
 {% block content %}
 	<div class="container main-container">
 			<div class="jumbotron"></div>
@@ -9,6 +10,19 @@
 				        <div id="myCarousel" class="carousel slide playlist-list"  style="width: 85%; position: relative; margin: auto; background: none !important;">
 			                <!-- Carousel items -->
 			                <div class="carousel-inner" style="background:none !important;">
+								<!--
+								{% for chunk in tracks|chunks:4 %}
+                                   {% for track in chunk %}
+								    <div class="item">
+										<div class="row-fluid">
+											<div class="col-md-3 col-sm-3 col-xs-6 one-artist">
+									          <img src="{{track.image}}" class="img-responsive img-rounded music-cover" data-role="{{track.audio_file.url}}"/>
+									          <a href="" class="btn btn-default click-on">{{track.artist}}</a>
+				            	            </div>
+										</div>
+									</div>
+								   {% endfor %}
+								{% endfor %} -->
 			                    
 			                <div class="item active">
 			                	<div class="row-fluid">

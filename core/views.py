@@ -3,10 +3,11 @@ from django.contrib.auth.decorators import login_required
 from forms import TrackUploadForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
-from core.models import Profile,Genre,Album,Playlist
+from core.models import Profile,Genre,Album,Playlist,Track
 
 
 def home(request):
+    tracks = Track.objects.all()
     return render(request,'core/index.html')
 
 
