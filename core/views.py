@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from forms import TrackUploadForm
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
-from core.models import Profile,Genre
+from core.models import Profile,Genre,Album
 
 
 def home(request):
@@ -22,6 +22,7 @@ def artist_detail(request,pk):
 
 
 def playlist(request):
+    playlists = Playlist.objects.all()
     return render(request,'core/playlist.html')
 
 def whats_new(request):
@@ -32,17 +33,16 @@ def whats_new(request):
 def upload(request):
     state=''
     genres = Genre.objects.all()
-    artists = Profile.objects.filter(is_artist=True)
+    albums = Album.objects.all()
     if request.POST:
         form = TrackUploadForm(request.POST,request.FILES)
         if form.is_valid():
             if request.user.profile.is_artist is False:
-                track = form.save(commit=False)
-                track.save()
+                form.save()
                 return HttpResponseRedirect(reverse('core:artist_detail', args=(request.user.profile.pk,)))
     else:
         form = TrackUploadForm()
     return render(request,'core/upload.html',{
-        'form':form,'state':state,'genres':genres,'artists':artists
+        'form':form,'state':state,'genres':genres,'albums':albums
     })
 

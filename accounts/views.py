@@ -18,7 +18,10 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request,user)
-                return redirect(next_url)
+                if next_url :
+                    return redirect(next_url)
+                else:
+                    return redirect('core:home')
 
     return render(request,'accounts/login.html',{'username':username,'password':password,'next':next_url})
 
@@ -33,10 +36,10 @@ def sign_up(request):
         registration_form = RegistrationForm(request.POST)
         profile_form = ProfileForm(request.POST)
         if registration_form.is_valid() and profile_form.is_valid():
-            user = registration_form.save(commit=False)
-            user.save
+            user = registration_form.save()
             profile = profile_form.save(commit=False)
             profile.user = user
+            user.save()
             profile.save()
         return HttpResponseRedirect(reverse('core:home'))
     else:
